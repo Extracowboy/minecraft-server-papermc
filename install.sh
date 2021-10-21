@@ -44,7 +44,7 @@ do
 			;;
                 b)
                         msbuild=${OPTARG}
-                        printf "\n[script] project set to: ${msbuild}"
+                        printf "\n[script] build version set to: ${msbuild}"
                         ;;
 		h | *)
 			usage
