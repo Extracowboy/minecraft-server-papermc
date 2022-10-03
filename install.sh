@@ -25,8 +25,8 @@ install_deps() {
 
 installdeps=false
 msproject="paper"
-msversion="1.17.1"
-msbuild="345"
+msversion="1.19.2"
+msbuild="194"
 
 while getopts hip:v:b: name
 do
@@ -60,8 +60,7 @@ fi
 
 msdownload="${msproject}-${msversion}-${msbuild}"
 printf "\n[script] installing minecraft server: ${msdownload} ..."
-wget https://papermc.io/api/v2/projects/${msproject}/versions/${msversion}/builds/${msbuild}/downloads/${msdownload}.jar &> /dev/null
+wget https://api.papermc.io/v2/projects/${msproject}/versions/${msversion}/builds/${msbuild}/downloads/${msdownload}.jar &> /dev/null
 
 printf "\n\n[script] job finished. Happy serving!\n\n"
 exit 0;
-
